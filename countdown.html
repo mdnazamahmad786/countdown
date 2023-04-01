@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <style>
+
+      
+        
+        
+        
+        body{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 100vh;
+       overflow-x: hidden;
+       background-color: #97bde3;
+    
+
+   }
+   
+    </style>
+    <link rel="stylesheet" href="thirdparty/countdown/css/flipTimer.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+    <script src="thirdparty/countdown/js/jquery.flipTimer.js"></script>
+</head>
+<body>
+   
+ 
+
+   
+ 
+    <div class="flipTimer">
+        <div class="days"></div>
+        <div class="hours"></div>
+        <div class="minutes"></div>
+        <div class="seconds"></div>
+      </div>
+
+
+    <script>
+
+
+$(document).ready(function() {
+$('.flipTimer').flipTimer({ 
+
+// count up or countdown
+direction: 'down', 
+
+// the target <a href="https://www.jqueryscript.net/time-clock/">date</a>
+date: 'Jan 1, 2024 12:00', 
+
+// callback works only with direction = "down"
+callback: function() { alert('times up!'); }
+
+});
+});
+
+    </script>
+
+   
+</body>
+</html>
